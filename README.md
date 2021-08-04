@@ -1,23 +1,27 @@
-# Hello world docker action
+<p align="center">
+  <a href="https://github.com/github-actions-up-and-running/uppercase/actions"><img alt="GitHub Actions status" src="https://github.com/github-actions-up-and-running/uppercase/workflows/build-test/badge.svg"></a>
+</p>
 
-This action prints "Hello World" to the log or "Hello" + the name of a person to greet. To learn how this action was built, see "[Creating a Docker container action](https://help.github.com/en/articles/creating-a-docker-container-action)" in the GitHub Help documentation.
+# Uppercase Action
+
+This action converts a text to uppercase.
 
 ## Inputs
 
-### `who-to-greet`
+### `text`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** The text to be converted to uppercase.
 
 ## Outputs
 
-### `time`
+### `uppercase-text`
 
-The time we greeted you.
+The text converted to uppercase.
 
-## Example usage
+## Example Usage
 
 ```yaml
-uses: actions/hello-world-docker-action@master
+uses: github-actions-up-and-running/uppercase@v1.0.0
 with:
-  who-to-greet: 'Mona the Octocat'
+  text: Hello, World!
 ```
