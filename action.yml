@@ -1,15 +1,18 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Uppercase'
+description: 'Convert text to uppercase'
+author: 'masaki'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  text:
+    description: 'Text to be converted to uppercase'
     required: true
-    default: 'World'
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  uppercase-text:
+    description: 'Text converted to uppercase'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.text }}
+branding:
+  icon: 'chevrons-up'
+  color: 'green'
